@@ -1,12 +1,380 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700');
-
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
+    align-items: center;
     background-color: #FFFFFF;
-  }
-  
+    color: #333;
+    min-height: 100vh;
+}
+
+.promo-bar {
+    width: 100%;
+    background-color: #E9BAA0; /* Pink color */
+    color: #FFF; /* White text */
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the content within the navbar */
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    position: relative; /* To use absolute positioning inside */
+}
+
+.landing-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Optional: Restricts the width of the centered content */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: absolute; /* Positioning the title to the left */
+    left: 0;
+    gap: 20px;
+}
+
+.business-title {
+    font-size: 3rem;
+    font-family: "Jost", sans-serif;
+    letter-spacing: 3px; 
+    font-weight: 400;
+    color: #333;
+    margin: 22px 12px 2px 25px;
+}
+
+.nav-links, .auth-links {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+.nav-links a, .auth-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    letter-spacing: 1px; 
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.nav-links a::after, .auth-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover, .auth-links a:hover {
+    color: #555;
+}
+
+.nav-links a:hover::after, .auth-links a:hover::after {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.carousel {
+    position: relative;
+    width: 100vw; /* Full width of the viewport */
+    height: 700px;
+    overflow: hidden;
+    margin: 20px auto; /* Center the carousel */
+}
+
+.carousel-inner {
+    display: flex;
+    width: 400vw;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    width: 100vw;
+    height: 100%;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.05);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+
+
+
+
+.main-header {
+    font-size: 3em;
+    margin: 0;
+}
+
+
+.products-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px 20px;
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 3px; 
+    font-weight: 200;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+}
+
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.product-title {
+    font-size: 1.2em;
+    margin: 15px 0 5px;
+    text-align: center;
+    font-weight: 100;
+    letter-spacing: 1px; 
+}
+
+.product-price {
+    font-size: 1em;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #666;
+}
+
+.default-image {
+    opacity: 1;
+}
+
+.hover-image {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.image-wrapper:hover .default-image {
+    opacity: 0;
+}
+
+.image-wrapper:hover .hover-image {
+    opacity: 1;
+}
+
+.payment-options {
+    margin-bottom: 21px;
+}
+
+.disclosure__toggle {
+    font-size: 0.8em;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 26px;
+    margin-right: 100px;
+}
+
+.disclosure__toggle-arrow svg {
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+}
+
+.line-arrow {
+    stroke-width: 1px;
+}
+
+.bottom-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    width: 100vw;
+    flex-grow: 1;
+    margin-bottom: 30px;
+}
+
+.grid-item {
+    width: 100%;
+    height: 100%;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+}
+
+.footer p {
+    letter-spacing: 1px; 
+}
+
+
+
+
+
+
+
+
+.modern-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-title {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 500;
+    letter-spacing: 2px; 
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+    letter-spacing: 2px; 
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #000;
+}
+
+.footer-description {
+    font-size: 0.9em;
+    color: #666;
+    margin: 15px 0;
+    letter-spacing: 2px; 
+}

@@ -1,22 +1,29 @@
 <nav>
     <% if(user) { %>
     <div class="landing-header">
-      <div class="logo-container">
-      </div>
-      <div class="nav-links">
-        <a href="/jackets">View all jackets</a>
-        <a href="/auth/sign-out">Sign Out</a>
-      </div>
+        <div class="logo-container">
+            <div class="business-title">Bubish</div>
+        </div>
+        <div class="nav-links">
+            <a href="#">Shop</a>
+            <a href="#">New</a>
+            <a href="#">Bridal</a>
+            <a href="#">Visit Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Join Our World</a>
+            <a href="/auth/sign-out">Sign Out</a>
+        </div>
     </div>
-  
+
     <% } else { %>
     <div class="landing-header">
-      <div class="logo-container">
-      </div>
-      <div class="auth-links">
-        <a href="/auth/sign-up">Sign Up</a>
-        <a href="/auth/sign-in">Sign In</a>
-      </div>
+        <div class="logo-container">
+            <div class="business-title">Bubish</div>
+        </div>
+        <div class="auth-links">
+            <a href="/auth/sign-up">Sign Up</a>
+            <a href="/auth/sign-in">Sign In</a>
+        </div>
     </div>
     <% } %>
-  </nav>
+</nav>
