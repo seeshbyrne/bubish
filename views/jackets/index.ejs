@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %>: All Jackets></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1 class="main-header">Bubish</h1>
+
+
+
+
+    <ul>
+        <% jackets.forEach((jacket) => { %>
+            <li>
+                <%= jacket.name %>
+                <a href="/jackets/<%= jacket._id %>">More details</a>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
