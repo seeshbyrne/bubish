@@ -3,9 +3,7 @@ const router = express.Router();
 
 const Jacket = require('../models/jacket');
 
-//routes go here
 
-// INDEX
 router.get('/', async (req, res) => {
     try {
         const jackets = await Jacket.find({}).populate('name');
@@ -20,9 +18,6 @@ router.get('/', async (req, res) => {
     }
 });
 
-// NEW
-
-// SHOW
 router.get('/:id', async (req, res) => {
     try {
         const jacket = await Jacket.findById(req.params.id).populate('name');
@@ -38,11 +33,6 @@ router.get('/:id', async (req, res) => {
         res.redirect('/jackets');
     }
 });
-
-// CREATE
-// EDIT
-// UPDATE
-//DELETE
 
 router.post('/:id/favorite', async (req, res) => {
     try {

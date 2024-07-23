@@ -10,7 +10,7 @@ const jacketSchema = new mongoose.Schema({
         required: true,
         min: 0,
     },
-    favoritedByUsers: [{ //square brackets makes it many to many
+    favoritedByUsers: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     }]

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +8,11 @@
     </title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
-
 <body>
     <div class="promo-bar">
         Sign Up and get 10% Off Your First Order
     </div>
     <%- include('../partials/_navbar.ejs') %>
-
-
-
-
     <div class="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -49,10 +43,6 @@
             document.querySelector('.carousel-inner').style.transform = `translateX(-${currentSlide * 100}vw)`;
         }
     </script>
-
-    
-
-
         <section class="products-section">
             <h2 class="section-title">Latest Arrivals</h2>
             <div class="products-grid">
@@ -85,20 +75,24 @@
         </section>
 
 
-        <!-- <div class="image-grid">
+        <div class="image-grid">
             <div class="grid-item">
-                <img src="https://via.placeholder.com/300" alt="Image 1">
+                <img src="/images/georgina.JPG" alt="Image 1">
+                <div class="overlay-text">New</div>
             </div>
             <div class="grid-item">
-                <img src="https://via.placeholder.com/300" alt="Image 2">
+                <img src="/images/emma-1.JPG" alt="Image 2">
+                <div class="overlay-text">Fur</div>
             </div>
             <div class="grid-item">
-                <img src="https://via.placeholder.com/300" alt="Image 3">
+                <img src="/images/sara-1.JPG" alt="Image 3">
+                <div class="overlay-text">Best Sellers</div>
             </div>
             <div class="grid-item">
-                <img src="https://via.placeholder.com/300" alt="Image 4">
+                <img src="/images/faux-1.JPG" alt="Image 4">
+                <div class="overlay-text">Sale</div>
             </div>
-        </div> -->
+        </div>
 
         <div class="modern-footer">
             <div class="footer-section">
@@ -152,8 +146,5 @@
         <footer class="footer">
             <p>&copy; 2024 Bubish. All rights reserved.</p>
         </footer>
-
-
 </body>
-
 </html>
