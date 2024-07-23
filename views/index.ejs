@@ -6,19 +6,15 @@
   <title>Home Page</title>
   <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
-<body>
+<body class="first-landing">
   <%- include('./partials/_navbar.ejs') %>
-  <% if (user) { %>
-    <h1 class="main-header">Bubish</h1>
-    <p>
-      <a href="/auth/sign-out">Sign out</a>
-    </p>
-  <% } else { %>
-    <h1 class="main-header">Bubish</h1>
-    <p>
-      <a href="/auth/sign-up">Sign up</a> or
-      <a href="/auth/sign-in">Sign in</a>.
-    </p>
-  <% } %>
+
+  <div class="promo-bar-main">Special Offer! Get 20% off on your first purchase.</div>
+  <div class="landing-container">
+    <h1 class="landing-header-main">Welcome to Bubish</h1>
+    <p class="opening-line">Elevate your style with our exclusive collection</p>
+    <a href="/auth/sign-in" class="call-to-action">Start Exploring</a>
+  </div>
+
 </body>
 </html>
